@@ -1,26 +1,24 @@
-// Send JSON Data via Fetch POST Request 
-// • Use the fetch() API to send a POST request with JSON data to an 
-// API endpoint. Log the response or success message. 
-// BASE_URL: https://jsonplaceholder.typicode.com/posts
-// (((TASK))) 
-// make html form and when submit get the data instead of make it static
-// with try-catch, 
-// try to get data by id and edit on it
+// createCounter , counter = 0 ; return object
+// closure, module, Promise
+import createCounter from './counter.js'
 
+const myCounter = createCounter()
 
-// import makePOSTRequest from './HTTP_requests.js';
+console.log(myCounter.getCounter()) // 0
+myCounter.increaseCounter()
+myCounter.increaseCounter()
+myCounter.increaseCounter()
+myCounter.increaseCounter()
+myCounter.increaseCounter()
+console.log(myCounter.getCounter()) //  5
+myCounter.decreaseCounter()
+myCounter.decreaseCounter()
+myCounter.decreaseCounter()
+console.log(myCounter.getCounter()) //  2
+myCounter.resetCounter()
+console.log(myCounter.getCounter()) //  2
+myCounter.resetCounter().then(() => {
+    console.log("After resetting !")
+    console.log(myCounter.getCounter())
+})
 
-// const data1 = {
-//     userId: 1,
-//     title: "Hello, world",
-//     body: "this is post body as a testing"
-// }
-// const data2 = {
-//     userId: 3,
-//     title: "Hello, world from data 2",
-//     body: "this is post body as a testing from data2"
-// }
-// const BASE_URL = 'https://jsonplaceholder.typicode.com/posts'
-
-// makePOSTRequest(BASE_URL, data1)
-// makePOSTRequest(BASE_URL, data2)
